@@ -1,0 +1,634 @@
+/* -----------------------------------------------------------------------
+
+
+ Blueprint CSS Framework 0.9
+ http://blueprintcss.org
+
+   * Copyright (c) 2007-Present. See LICENSE for more info.
+   * See README for instructions on how to use Blueprint.
+   * For credits and origins, see AUTHORS.
+   * This is a compressed file. See the sources in the 'src' directory.
+
+----------------------------------------------------------------------- */
+
+/* reset.css */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+article, aside, dialog, figure, footer, header, hgroup, nav, section {display:block;}
+body {line-height:1.5;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+
+/* typography.css */
+@font-face {
+	font-family: 'MyriadProBoldCondensed';
+	src: url('../fonts/myriadcondensed-webfont.eot');
+	src: local('.'), url('../fonts/myriadcondensed-webfont.woff') format('woff'), url('../fonts/myriadcondensed-webfont.ttf') format('truetype'), url('../fonts/myriadcondensed-webfont.svg#webfontTQ8DxsqV') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+html {font-size:100.01%;}
+body {font-size:75%;color:#5b5b5b;background:#cdcdcd url('../images/bg.jpg') repeat-x top center;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#262626;font-family:MyriadProBoldCondensed, arial, helvetica;}
+h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
+h2 {font-size:2em;margin-bottom:0.75em;}
+h2.title a {text-decoration:none;line-height:0.95em;color:#5b5b5b;}
+h2.title a:hover {color:#000;}
+h3 {font-size:1.5em;line-height:1;margin-bottom:1em;}
+h4 {font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
+h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
+h6 {font-size:1em;font-weight:bold;}
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
+p {margin:0 0 1.5em;}
+p img.left {float:left;margin:1.5em 1.5em 1.5em 0;padding:0;}
+p img.right {float:right;margin:1.5em 0 1.5em 1.5em;}
+a:focus, a:hover {color:#5b5b5b;text-decoration:none}
+a {color:#008aca;text-decoration:none;}
+blockquote {margin:1.5em;color:#666;font-style:italic;}
+strong {font-weight:bold;}
+em, dfn {font-style:italic;}
+dfn {font-weight:bold;}
+sup, sub {line-height:0;}
+abbr, acronym {border-bottom:1px dotted #666;}
+address {margin:0 0 1.5em;font-style:italic;}
+del {color:#666;}
+pre {margin:1.5em 0;white-space:pre;}
+pre, code, tt {font:1em 'andale mono', 'lucida console', monospace;line-height:1.5;}
+code {background-color:transparent;color:#919191;padding:1px;}
+li ul, li ol {margin:0;}
+ul, ol {margin:0 1.5em 1.5em 0;padding-left:3.333em;}
+ul {list-style-type:disc;}
+ol {list-style-type:decimal;}
+dl {margin:0 0 1.5em 0;}
+dl dt {font-weight:bold;}
+dd {margin-left:1.5em;}
+table {margin-bottom:1.4em;width:100%;}
+th {font-weight:bold;}
+thead th {background:#c3d9ff;}
+th, td, caption {padding:4px 10px 4px 5px;}
+tr.even td {background:#e5ecf9;}
+tfoot {font-style:italic;}
+caption {background:#eee;}
+.small {font-size:.8em;margin-bottom:1.875em;line-height:1.875em;}
+.large {font-size:1.2em;line-height:2.5em;margin-bottom:1.25em;}
+.hide {display:none;}
+.quiet {color:#666;}
+.loud {color:#000;}
+.highlight {background:#ff0;}
+.added {background:#060;color:#fff;}
+.removed {background:#900;color:#fff;}
+.first {margin-left:0;padding-left:0;}
+.last {margin-right:0;padding-right:0;}
+.top {margin-top:0;padding-top:0;}
+.bottom {margin-bottom:0;padding-bottom:0;}
+
+/* forms.css */
+label {font-weight:bold;}
+fieldset {padding:1.4em;margin:0 0 1.5em 0;border:1px solid #ccc;}
+legend {font-weight:bold;font-size:1.2em;}
+input[type=text], input[type=password], input.text, input.title, textarea, select {background-color:#fff;border:1px solid #bbb;}
+input[type=text]:focus, input[type=password]:focus, input.text:focus, input.title:focus, textarea:focus, select:focus {border-color:#666;}
+input[type=text], input[type=password], input.text, input.title, textarea, select {margin:0;}
+input.text, input.title {width:300px;padding:5px;}
+input.nama {width:100%;padding:5px;}
+input.title {font-size:1.5em;}
+select.title {font-size:1.5em;padding:5px;}
+textarea {width:390px;height:250px;padding:5px;}
+input[type=checkbox], input[type=radio], input.checkbox, input.radio {position:relative;top:.25em;}
+input[type="submit"], input[type="button"], .form_button a {background:#bdbdbd url('../images/button.jpg') repeat-x;border:0 none;font-weight:normal;	color:#262626;text-shadow:1px 1px 1px #fff;font-weight:bold;padding:2px 8px;font-size:12px;
+-moz-border-radius: 14px 14px 14px 14px;
+	-webkit-border-bottom-left-radius: 14px;
+	-webkit-border-bottom-right-radius: 14px;
+	-khtml-border-bottom-left-radius: 14px;
+	-khtml-border-bottom-right-radius: 14px;
+	border-bottom-left-radius: 14px;
+	border-bottom-right-radius: 14px}
+input[type="submit"]:active, input[type="button"]:active, .form_button a:active {background:#bdbdbd url('../images/button_active.jpg') repeat-x;}
+
+form.inline {line-height:3;}
+form.inline p {margin-bottom:0;}
+.error, .notice, .success {padding:.8em;margin-bottom:1em;border:2px solid #ddd;}
+.error {background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
+.notice {background:#FFF6BF;color:#514721;border-color:#FFD324;}
+.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
+.error a {color:#8a1f11;}
+.notice a {color:#514721;}
+.success a {color:#264409;}
+
+/* A container should group all your columns. */
+.container {
+  width: 998px;
+  margin: 0 auto;
+}
+
+/* Columns
+-------------------------------------------------------------- */
+
+/* Sets up basic grid floating and margin. */
+div.span-1, div.span-2, div.span-3, div.span-4, div.span-5, div.span-6, div.span-7, div.span-8, div.span-9, div.span-10, div.span-11, div.span-12, div.span-13, div.span-14, div.span-15, div.span-16, div.span-17, div.span-18, div.span-19, div.span-20, div.span-21, div.span-22, div.span-23, div.span-24 {float:left;margin-right: 10px;}
+
+/* The last column in a row needs this class. */
+div.last { margin-right: 0; }
+
+/* Use these classes to set the width of a column. */
+.span-1  { width: 32px;}
+.span-2  { width: 74px;}
+.span-3  { width: 116px;}
+.span-4  { width: 158px;}
+.span-5  { width: 200px;}
+.span-6  { width: 242px;}
+.span-7  { width: 284px;}
+.span-8  { width: 326px;}
+.span-9  { width: 368px;}
+.span-10 { width: 410px;}
+.span-11 { width: 452px;}
+.span-12 { width: 494px;}
+.span-13 { width: 536px;}
+.span-14 { width: 578px;}
+.span-15 { width: 620px;}
+.span-16 { width: 662px;}
+.span-17 { width: 704px;}
+.span-18 { width: 746px;}
+.span-19 { width: 788px;}
+.span-20 { width: 830px;}
+.span-21 { width: 872px;}
+.span-22 { width: 914px;}
+.span-23 { width: 956px;}
+.span-24, div.span-24 { width: 998px; margin: 0; }
+
+
+/* Add these to a column to append empty cols. */
+.append-1  { padding-right: 42px;}
+.append-2  { padding-right: 84px;}
+.append-3  { padding-right: 126px;}
+.append-4  { padding-right: 168px;}
+.append-5  { padding-right: 210px;}
+.append-6  { padding-right: 252px;}
+.append-7  { padding-right: 294px;}
+.append-8  { padding-right: 336px;}
+.append-9  { padding-right: 378px;}
+.append-10 { padding-right: 420px;}
+.append-11 { padding-right: 462px;}
+.append-12 { padding-right: 504px;}
+.append-13 { padding-right: 546px;}
+.append-14 { padding-right: 588px;}
+.append-15 { padding-right: 630px;}
+.append-16 { padding-right: 672px;}
+.append-17 { padding-right: 714px;}
+.append-18 { padding-right: 756px;}
+.append-19 { padding-right: 798px;}
+.append-20 { padding-right: 840px;}
+.append-21 { padding-right: 882px;}
+.append-22 { padding-right: 924px;}
+.append-23 { padding-right: 966px;}
+
+
+/* Add these to a column to prepend empty cols. */
+.prepend-1  { padding-left: 42px;}
+.prepend-2  { padding-left: 84px;}
+.prepend-3  { padding-left: 126px;}
+.prepend-4  { padding-left: 168px;}
+.prepend-5  { padding-left: 210px;}
+.prepend-6  { padding-left: 252px;}
+.prepend-7  { padding-left: 294px;}
+.prepend-8  { padding-left: 336px;}
+.prepend-9  { padding-left: 378px;}
+.prepend-10 { padding-left: 420px;}
+.prepend-11 { padding-left: 462px;}
+.prepend-12 { padding-left: 504px;}
+.prepend-13 { padding-left: 546px;}
+.prepend-14 { padding-left: 588px;}
+.prepend-15 { padding-left: 630px;}
+.prepend-16 { padding-left: 672px;}
+.prepend-17 { padding-left: 714px;}
+.prepend-18 { padding-left: 756px;}
+.prepend-19 { padding-left: 798px;}
+.prepend-20 { padding-left: 840px;}
+.prepend-21 { padding-left: 882px;}
+.prepend-22 { padding-left: 924px;}
+.prepend-23 { padding-left: 966px;}
+
+
+
+/* Border on right hand side of a column. */
+div.border {
+  padding-right:4px;
+  margin-right:5px;
+  border-right: 1px solid #eee;
+}
+
+/* Border with more whitespace, spans one column. */
+div.colborder {
+  padding-right:30px;
+  margin-right:27px;
+  border-right: 1px solid #eee;
+}
+
+/* Use these classes on an element to push it into the 
+   next column, or to pull it into the previous column.  */
+
+.pull-1 { margin-left: -42px;}
+.pull-2 { margin-left: -84px;}
+.pull-3 { margin-left: -126px;}
+.pull-4 { margin-left: -168px;}
+.pull-5 { margin-left: -210px;}
+.pull-6 { margin-left: -252px;}
+.pull-7 { margin-left: -294px;}
+.pull-8 { margin-left: -336px;}
+.pull-9 { margin-left: -378px;}
+.pull-10 { margin-left: -420px;}
+.pull-11 { margin-left: -462px;}
+.pull-12 { margin-left: -504px;}
+.pull-13 { margin-left: -546px;}
+.pull-14 { margin-left: -588px;}
+.pull-15 { margin-left: -630px;}
+.pull-16 { margin-left: -672px;}
+.pull-17 { margin-left: -714px;}
+.pull-18 { margin-left: -756px;}
+.pull-19 { margin-left: -798px;}
+.pull-20 { margin-left: -840px;}
+.pull-21 { margin-left: -882px;}
+.pull-22 { margin-left: -924px;}
+.pull-23 { margin-left: -966px;}
+.pull-24 { margin-left: -1008px;}
+
+.pull-1, .pull-2, .pull-3, .pull-4, .pull-5, .pull-6, .pull-7, .pull-8, .pull-9, .pull-10, .pull-11, .pull-12, .pull-13, .pull-14, .pull-15, .pull-16, .pull-17, .pull-18, .pull-19, .pull-20, .pull-21, .pull-22, .pull-23, .pull-24 {float:left;position:relative;}
+
+
+.push-1 { margin: 0 -42px 1.5em 42px;}
+.push-2 { margin: 0 -84px 1.5em 84px;}
+.push-3 { margin: 0 -126px 1.5em 126px;}
+.push-4 { margin: 0 -168px 1.5em 168px;}
+.push-5 { margin: 0 -210px 1.5em 210px;}
+.push-6 { margin: 0 -252px 1.5em 252px;}
+.push-7 { margin: 0 -294px 1.5em 294px;}
+.push-8 { margin: 0 -336px 1.5em 336px;}
+.push-9 { margin: 0 -378px 1.5em 378px;}
+.push-10 { margin: 0 -420px 1.5em 420px;}
+.push-11 { margin: 0 -462px 1.5em 462px;}
+.push-12 { margin: 0 -504px 1.5em 504px;}
+.push-13 { margin: 0 -546px 1.5em 546px;}
+.push-14 { margin: 0 -588px 1.5em 588px;}
+.push-15 { margin: 0 -630px 1.5em 630px;}
+.push-16 { margin: 0 -672px 1.5em 672px;}
+.push-17 { margin: 0 -714px 1.5em 714px;}
+.push-18 { margin: 0 -756px 1.5em 756px;}
+.push-19 { margin: 0 -798px 1.5em 798px;}
+.push-20 { margin: 0 -840px 1.5em 840px;}
+.push-21 { margin: 0 -882px 1.5em 882px;}
+.push-22 { margin: 0 -924px 1.5em 924px;}
+.push-23 { margin: 0 -966px 1.5em 966px;}
+.push-24 { margin: 0 -1008px 1.5em 1008px;}
+
+.push-1, .push-2, .push-3, .push-4, .push-5, .push-6, .push-7, .push-8, .push-9, .push-10, .push-11, .push-12, .push-13, .push-14, .push-15, .push-16, .push-17, .push-18, .push-19, .push-20, .push-21, .push-22, .push-23, .push-24 {float:right;position:relative;}
+.prepend-top {margin-top:1.5em;}
+.append-bottom {margin-bottom:1.5em;}
+.box {padding:1.5em;margin-bottom:1.5em;background:#E5ECF9;}
+hr {background:#ddd;color:#ddd;clear:both;float:none;width:100%;height:.1em;margin:0 0 1.45em;border:none;}
+hr.space {background:#fff;color:#fff;visibility:hidden;}
+.clearfix:after, .container:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+.clearfix, .container {display:block;}
+.clear {clear:both;}
+
+.header {height:50px;background:transparent url('../images/logo.png') no-repeat top left}
+.menu {height:40px;background:transparent url('../images/menu.png') no-repeat top center;}
+h1.app_title {color:#001a48;text-shadow:1px 1px 1px #fff;text-align:right;font-size:26px;line-height:30px;margin-bottom:0}
+.info {font-size:11px;color:#1f6293;float:right;}
+.info a {color:#c30000;font-weight:bold;}
+.info a:hover {color:#1f6293;}
+.content {background:#fff;margin-top:5px;padding:0px;width:938px;
+-moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-khtml-border-bottom-left-radius: 4px;
+	-khtml-border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;}
+
+
+.top_info {width:99%;background:#dedfe0;padding:0px 5px;margin-bottom:5px;color:#000;}
+.footer {background:transparent;height:24px;color:#1f6293;font-size:11px;line-height:12px;margin-top:10px;text-align:center;z-index:-9999}
+h2.title_form {background:transparent url('../images/tirta-meter.gif') no-repeat left center;padding-left:35px;}
+.tabs {cursor:pointer;}
+div.scroll {
+height: 100%;
+width: 950px;
+overflow: auto;
+border: 1px solid #666;
+background-color: #ccc;
+padding: 8px;
+}
+.loading {padding-top:10px;color:#fff;text-align:right;}
+.loading img {margin-right:10px;}
+
+/* Root = Horizontal, Secondary = Vertical */
+ul#navmenu-h {
+  border: 0 none;
+  width: 720px; /*For KHTML*/
+  list-style: none;
+  height: 38px;
+  text-align:left;
+  padding-top:1px;
+}
+
+ul#navmenu-h li {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  float: left; /*For Gecko*/
+  display: inline;
+  list-style: none;
+  position: relative;
+  height: 38px;
+}
+
+ul#navmenu-h li ul li {
+  height: 24px;
+}
+
+ul#navmenu-h ul {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  width: 160px;
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+}
+
+ul#navmenu-h ul:after /*From IE 7 lack of compliance*/{
+  clear: both;
+  display: block;
+  font: 1px/0px serif;
+  content: ".";
+  height: 0;
+  visibility: hidden;
+}
+
+ul#navmenu-h ul li {
+  width: 190px;
+  float: left; /*For IE 7 lack of compliance*/
+  display: block !important;
+  display: inline; /*For IE*/
+  z-index:9999;
+}
+
+/* Root Menu */
+ul#navmenu-h a {
+  border: 0 none;
+  height: 1%; /*For IE*/
+  height: auto !important;
+
+  padding: 0 10px;
+  float: none !important; /*For Opera*/
+  float: left; /*For IE*/
+  display: block;
+  background: transparent;
+  color: #fff;
+  text-shadow:1px 1px 1px #000;
+  font: bold 18px/38px MyriadProBoldCondensed, Arial, Verdana, Helvetica, sans-serif;
+  text-decoration: none;
+  height:38px;
+}
+
+ul#navmenu-h ul a {
+  font: bold 12px/24px Arial, Verdana, Helvetica, sans-serif;
+  text-decoration: none;
+  height:24px;
+}
+
+/* Root Menu Hover Persistence */
+ul#navmenu-h a:hover,
+ul#navmenu-h li:hover a,
+ul#navmenu-h li.iehover a {
+  background: #00040c;
+  color: #fff;
+  text-shadow:1px 1px 1px #000;
+}
+
+/* 2nd Menu */
+ul#navmenu-h li:hover li a,
+ul#navmenu-h li.iehover li a {
+  float: none;
+  background: #00040c;
+  color: #fff;
+  text-shadow:1px 1px 1px #000;
+  height:24px;
+}
+
+/* 2nd Menu Hover Persistence */
+ul#navmenu-h li:hover li a:hover,
+ul#navmenu-h li:hover li:hover a,
+ul#navmenu-h li.iehover li a:hover,
+ul#navmenu-h li.iehover li.iehover a {
+  background: #001a48;
+  color: #fff;
+  text-shadow:1px 1px 1px #000;
+}
+
+/* 3rd Menu */
+ul#navmenu-h li:hover li:hover li a,
+ul#navmenu-h li.iehover li.iehover li a {
+  background: #00040c;
+  color: #fff;
+  text-shadow:1px 1px 1px #000;
+  height:24px;
+}
+
+/* 3rd Menu Hover Persistence */
+ul#navmenu-h li:hover li:hover li a:hover,
+ul#navmenu-h li:hover li:hover li:hover a,
+ul#navmenu-h li.iehover li.iehover li a:hover,
+ul#navmenu-h li.iehover li.iehover li.iehover a {
+  background: #001a48;
+  color: #fff;
+  text-shadow:1px 1px 1px #000;
+}
+
+/* 4th Menu */
+ul#navmenu-h li:hover li:hover li:hover li a,
+ul#navmenu-h li.iehover li.iehover li.iehover li a {
+  background: #00040c;
+  color: #fff;
+  text-shadow:1px 1px 1px #000;
+  height:24px;
+}
+
+/* 4th Menu Hover */
+ul#navmenu-h li:hover li:hover li:hover li a:hover,
+ul#navmenu-h li.iehover li.iehover li.iehover li a:hover {
+  background: #001a48;
+  color: #fff;
+  text-shadow:1px 1px 1px #000;
+}
+
+ul#navmenu-h ul ul,
+ul#navmenu-h ul ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 190px;
+}
+
+/* Do Not Move - Must Come Before display:block for Gecko */
+ul#navmenu-h li:hover ul ul,
+ul#navmenu-h li:hover ul ul ul,
+ul#navmenu-h li.iehover ul ul,
+ul#navmenu-h li.iehover ul ul ul {
+  display: none;
+}
+
+ul#navmenu-h li:hover ul,
+ul#navmenu-h ul li:hover ul,
+ul#navmenu-h ul ul li:hover ul,
+ul#navmenu-h li.iehover ul,
+ul#navmenu-h ul li.iehover ul,
+ul#navmenu-h ul ul li.iehover ul {
+  display: block;
+}
+
+/* Mangrupaning Tabel */
+/*--------------------*/
+.table_head {
+	background:url('../images/table_head.jpg') repeat-x;
+ 	color: #fff;
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 12px; 
+	text-align: center;	
+	vertical-align:middle;
+	height:32px;
+	padding:5px 0;
+}
+
+tr.table_head td {
+	font-weight:bold;
+}
+
+.table_info {
+	background:transparent;
+ 	color: #000;
+	font-weight:bold;
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 11px; 
+	text-align: center;	
+	vertical-align:middle;
+	height:32px;
+	border-spacing:1;border:0 none}
+
+td.sub {background:#2a2d34;color:#fff;}
+td.contentsub {background:#5f6367;color:#fff;}
+table.table_info tr td {border:0 none}
+
+.table_validator {
+	background:#2b4168;
+ 	color: #fff;
+	font-weight:bold;
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 11px; 
+	text-align: center;	
+	vertical-align:middle;
+	height:32px;
+}
+
+
+.table_head a:link    {
+	text-decoration: none;
+	font-family:arial, verdana, helvetica, sans-serif;
+	font-size: 11px; 
+	font-weight: bold;
+	color: #fff;
+}
+.table_head a:visited {
+	text-decoration: none;
+	font-family:arial, verdana, helvetica, sans-serif;
+	font-size: 11px; 
+	font-weight: bold;
+	color: #fff;
+}
+.table_head a:hover {
+	text-decoration: none;
+	font-family:arial, verdana, helvetica, sans-serif;
+	font-size: 11px; 
+	font-weight: bold;
+	color:#FF0000; 
+	border-bottom: 2px solid #fff; 
+}
+.table_cell1 {
+	background:#fff; 
+	color: #000; 
+	font-family:arial, verdana, helvetica, sans-serif;
+	font-size: 11px; 
+	font-weight: normal; 
+	text-align: left;
+	vertical-align:middle;	
+	height:18px;	
+	padding:10px 0;
+}
+.table_cell2 {
+	background:#ebebeb; 
+	color: #000; 
+	font-family:arial, verdana, helvetica, sans-serif;
+	font-size: 11px; 
+	font-weight: normal; 
+	text-align: left;
+	vertical-align:middle;	
+	height:18px;
+	padding:10px 0;
+}
+.table_cell1 a:link, .table_cell1 a:visited, .table_cell1 a:hover,
+.table_cell2 a:link, .table_cell2 a:visited, .table_cell2 a:hover {
+	text-decoration: none;
+	font-family:arial, verdana, helvetica, sans-serif;
+	font-size: 11px; 
+	font-weight: normal;
+	color: #000066;
+}
+
+.table_cont_btm {
+	background-color:#2b4168; 
+	padding-top: 2px; 
+	padding-left: 2px; 
+	padding-right: 2px; 
+	padding-bottom: 2px; 
+	color:#fff;
+	text-shadow:1px 1px 1px #000;
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 8pt; 
+	font-weight: bold;
+}
+.table_cont_btm a:link {text-decoration: none;font-family:arial, verdana, helvetica, sans-serif;font-size:8pt;font-weight: bold;color: #ffffff}
+.table_cont_btm a:visited {text-decoration: none;font-family:arial, verdana, helvetica, sans-serif;font-size:8pt;font-weight: bold;color:#ffffff}
+.table_cont_btm a:hover {text-decoration: none;font-family:arial, verdana, helvetica, sans-serif;font-size:8pt;font-weight: bold;color:#FF0000 ;border-bottom: 2px solid #FF0000;}
+.peringatan{
+	position: absolute; top: 0px; right: 0px;
+	width: 100%; height: 100%; overflow: hidden;
+	z-index: 1;
+}
+.pesan{
+	position: absolute; left: 20%; top: 10%; z-index: 1;
+	padding: 20px; width: 60%;
+	border: solid 1px #5b5b5b;
+	background-color: #f4f4f4;
+	color: #5b5b5b; font-family: arial,verdana,tahoma,helvetica;
+	text-align: center; vertical-align: middle;
+	-moz-border-radius: 14px 14px 14px 14px;
+	-webkit-border-bottom-left-radius: 14px;
+	-webkit-border-bottom-right-radius: 14px;
+	-khtml-border-bottom-left-radius: 14px;
+	-khtml-border-bottom-right-radius: 14px;
+	border-bottom-left-radius: 14px;
+	border-bottom-right-radius: 14px
+}
+.right {text-align:right;}
+.left {text-align:left;}
+.center {text-align:center;}
+.load{
+	position: fixed; top: 0px; left: 0px; z-index: 1;
+	width: 100%; height: 100%; overflow: hidden;
+	background-image: url('../images/bg0.png');
+}

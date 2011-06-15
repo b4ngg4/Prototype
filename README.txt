@@ -1,0 +1,1 @@
+Database silahkan diimport dari _data/database.sql
