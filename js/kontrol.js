@@ -53,6 +53,19 @@ function buka(opt){
 	param.unset("targetId");
 	getSync('interface.php',targetId,errorId,param);
 }
+function anyar(opt){
+	var param 		= new Hash();
+	var param     	= classToHash(opt);
+	var targetId	= param.get("targetId");
+	param.unset("targetId");
+	new Ajax.Request('interface.php', {
+		method: 'post',
+		parameters: param,
+		onComplete: function(response) {
+			$(targetId).innerHTML = response.responseText;
+		}
+	});
+}
 function nonghol(opt){
 	$('peringatan').show();
 	var param 		= new Hash();
@@ -94,12 +107,21 @@ function periksa(opt){
 		getSync('interface.php',targetId,errorId,param);
 	}
 }
+function dashboard(opt){
+	var param 	= new Hash();
+	var param 	= classToHash(opt);
+	var targetId  = param.get("targetId");
+	new Ajax.PeriodicalUpdater(targetId, "interface.php",{
+		method: "post", frequency: 3, decay: 2, parameters: param
+	});
+}
 function tutup(opt){
 	var param 	= new Hash();
 	$(opt).remove();
 	getAsync('kosong.php','peringatan',param);
 	$('peringatan').hide();
 	$('load').hide();
+	anyar('refresh');
 }
 
 function cetakin(opt){

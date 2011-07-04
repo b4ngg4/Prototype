@@ -110,7 +110,7 @@ input[type="submit"]:active, input[type="button"]:active, .form_button a:active 
 
 form.inline {line-height:3;}
 form.inline p {margin-bottom:0;}
-.error, .notice, .success {padding:.8em;margin-bottom:1em;border:2px solid #ddd;}
+.error, .notice, .success {padding:.8em;margin-bottom:1em;border:1px solid #ddd;}
 .error {background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
 .notice {background:#FFF6BF;color:#514721;border-color:#FFD324;}
 .success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
@@ -610,7 +610,7 @@ table.table_info tr td {border:0 none}
 	z-index: 1;
 }
 .pesan{
-	position: absolute; left: 20%; top: 10%; z-index: 1;
+	position: absolute; left: 20%; top: 0%; z-index: 1;
 	padding: 20px; width: 60%;
 	border: solid 1px #5b5b5b;
 	background-color: #f4f4f4;
@@ -624,6 +624,14 @@ table.table_info tr td {border:0 none}
 	border-bottom-left-radius: 14px;
 	border-bottom-right-radius: 14px
 }
+.form-5 {
+	left: 5%; width: 90%;
+}
+.height-1  { height: 32px;}
+.height-2  { height: 74px;}
+.height-3  { height: 116px;}
+.height-4  { height: 158px;}
+.height-5  { height: 200px;}
 .right {text-align:right;}
 .left {text-align:left;}
 .center {text-align:center;}
